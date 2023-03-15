@@ -3,11 +3,11 @@ import ScrollIntoView from './ScrollIntoView';
 
 type Props = {
   data: string;
-  //   shouldBeHighlighted: boolean;
-  isFocused: boolean;
+  query: string;
 };
 
-const Step = ({ data, isFocused }: Props) => {
+const Step = ({ data, query }: Props) => {
+  const isSearchHighlightFocused = useIsFocusedSearchHighlight(data, query);
   return (
     <ScrollIntoView shouldScrollIntoView={isFocused}>
       <li style={{ paddingBlock: 25 }}>
