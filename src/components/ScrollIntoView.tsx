@@ -24,21 +24,16 @@ const ScrollIntoView: FC<Props> = ({
     const shouldRun =
       domNode && domNode instanceof Element && domNode.scrollIntoView;
 
-    console.log('shouldRun:', shouldRun);
-    console.log('domNode:', domNode);
     if (domNode && shouldRun) {
-      // setTimeout(() => {
       domNode.scrollIntoView({
         behavior,
         block: vertical,
         inline: horizontal,
       });
-      // }, 0);
     }
   }, [behavior, vertical, horizontal]);
 
   useEffect(() => {
-    console.log('bt: run effect, shouldScollIntoView', shouldScrollIntoView);
     if (shouldScrollIntoView) {
       scrollIntoView();
     }

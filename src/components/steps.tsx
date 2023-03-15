@@ -1,12 +1,19 @@
-import { data } from '@/data/data';
 import Step from './Step';
 
-const steps = () => {
+type Props = {
+  data: string[];
+  value: string;
+  index: number;
+  foundItems: number[];
+};
+
+const steps = ({ index, data }: Props) => {
   return (
     <>
+      <div>focusedItem = {index}</div>
       <ul>
         {data.map((m, i) => (
-          <Step data={m} key={m} />
+          <Step isFocused={index === i} data={m} key={m} />
         ))}
       </ul>
     </>

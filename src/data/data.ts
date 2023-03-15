@@ -1,5 +1,5 @@
 export const data = [
-  'adore',
+  'crash',
   'axis',
   'review',
   'bond',
@@ -18,6 +18,7 @@ export const data = [
   'consumer',
   'chalk',
   'applaud',
+  'enhance',
   'bucket',
   'concede',
   'doubt',
@@ -26,7 +27,7 @@ export const data = [
   'offset',
   'result',
   'relief',
-  'somet',
+  'advent',
   'report',
   'appoint',
   'population',
@@ -48,5 +49,4 @@ export const data = [
   'glance',
   'hair',
   'brother',
-  'adone',
 ];
