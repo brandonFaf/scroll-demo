@@ -1,11 +1,11 @@
+import { data } from '@/data/data';
 import Step from './Step';
 
 const steps = ({ query }: { query: string }) => {
   return (
     <>
-      <div>focusedItem = {index}</div>
       <ul>
-        {data.map((m, i) => (
+        {data.map(m => (
           <Step data={m} key={m} query={query} />
         ))}
       </ul>

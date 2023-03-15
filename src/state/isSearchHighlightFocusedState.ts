@@ -3,7 +3,6 @@ import { isEmpty, get as _get } from 'lodash';
 import { selectorFamily, useRecoilValue } from 'recoil';
 
 import { focusedResultIndexState } from './focusedResultIndexState';
-import { queryState } from './queryState';
 import { SearchHighlightKey } from '@/types';
 
 /*

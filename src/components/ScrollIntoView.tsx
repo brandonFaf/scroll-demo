@@ -25,11 +25,13 @@ const ScrollIntoView: FC<Props> = ({
       domNode && domNode instanceof Element && domNode.scrollIntoView;
 
     if (domNode && shouldRun) {
-      domNode.scrollIntoView({
-        behavior,
-        block: vertical,
-        inline: horizontal,
-      });
+      setTimeout(() => {
+        domNode.scrollIntoView({
+          behavior,
+          block: vertical,
+          inline: horizontal,
+        });
+      }, 100);
     }
   }, [behavior, vertical, horizontal]);
 

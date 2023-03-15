@@ -1,6 +1,6 @@
 import { useCountOfHighlightedSteps } from '@/state/countOfhighlightedSteps';
 import { focusedResultIndexState } from '@/state/focusedResultIndexState';
-import { useSearchQuery } from '@/state/queryState';
+
 import { useCallback, ChangeEvent, useState } from 'react';
 import { useRecoilState } from 'recoil';
 
@@ -33,10 +33,10 @@ const Search = ({
   }, [setFocusedResultIndex]);
   return (
     <header>
-      <input onChange={e => onChange(e.target.value)} value={value} />
-      <button onClick={() => onClick('⬇️')}>⬇️</button>
-      <span>{index}</span>
-      <button onClick={() => onClick('⬆️')}>⬆️</button>
+      <input onChange={onChangeQuery} value={query} />
+      <button onClick={onFocusPrevResult}>⬇️</button>
+      <span>{focusedResultIndex}</span>
+      <button onClick={onFocusNextResult}>⬆️</button>
     </header>
   );
 };
